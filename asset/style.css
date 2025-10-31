@@ -9,7 +9,7 @@
 
 }
 
-.head-search-input{
+.head-search-input,.mobile-search-input{
     unicode-bidi: embed;
     direction: rtl;
     outline: none;
@@ -17,7 +17,7 @@
     /* justify-content: space-between; */
     
 }
-.head-search-input::placeholder{
+.head-search-input::placeholder,.mobile-search-input::placeholder{
     font-family: 'ghaf';
 }
 .hide{
