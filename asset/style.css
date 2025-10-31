@@ -13,6 +13,7 @@
     unicode-bidi: embed;
     direction: rtl;
     outline: none;
+    /* border: none; */
     /* flex-direction: row-reverse; */
     /* justify-content: space-between; */
     
