@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "bangers";
+    src: "../font/Bangers.ttf";
+}
+@font-face{
+    font-family: "ghaf";
+    src: "../font/ghaf.ttf";
+    /* src: "../font/ghaf.otf" format('otf'); */
+
+}
+
+.head-search-input{
+    unicode-bidi: embed;
+    direction: rtl;
+    outline: none;
+    /* flex-direction: row-reverse; */
+    /* justify-content: space-between; */
+    
+}
+.head-search-input::placeholder{
+    font-family: 'ghaf';
+}
+.hide{
+    display: none;
+}
+*{
+    /* padding: 0;
+    margin: 0; */
+    box-sizing: border-box;
+    font-family: 'ghaf' ;
+    /* unicode-bidi: embed; */
+}
+.change-font-logo{
+    font-family: 'Bangers' !important;
+}
+.change-font{
+    font-family: 'ghaf' !important;
+}
+.dir-text{
+    unicode-bidi: embed;
+    direction: rtl;
+    white-space: pre-wrap;
+    
+}
+.brands-cont::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.slide-none{
+    display: none;
+}
+.dir-cont{
+    direction: rtl;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: #FFFF00;
+}
