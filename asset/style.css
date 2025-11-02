@@ -62,3 +62,6 @@
 ::-webkit-scrollbar-thumb{
     background-color: #FFFF00;
 }
+.link-selected{
+    color: #FFFF00;
+}

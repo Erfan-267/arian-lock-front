@@ -116,3 +116,5 @@ function moveSlide(n){
     slideNumber+=n;
     veiwSlide(slideNumber);
 }
+
+
