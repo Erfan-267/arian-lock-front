@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <title>تست نقشه (Leaflet) — رفع مشکل</title>
+
+  <!-- Leaflet CSS (بدون integrity برای تست) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <style>
+    body { font-family: Tahoma, sans-serif; direction: rtl; padding: 12px; }
+    #map { height: 400px; width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+    .controls { margin: 8px 0; }
+    pre { background:#f7f7f7; padding:8px; border-radius:6px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <h3>تست نقشه — اگر نقشه نمایش داده نشد، خطاها را در کنسول بررسی کنید</h3>
+
+  <div class="controls">
+    <button id="btn-locate">قرار دادن مارکر روی موقعیت فعلی (در صورت اجازه)</button>
+    <button id="btn-invalidate">ری‌فَرش نقشه (invalidateSize)</button>
+  </div>
+
+  <div id="map"></div>
+
+  <p id="status">وضعیت: آماده</p>
+
+  <!-- Leaflet JS (بدون integrity برای تست) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    // تابع کمکی برای لاگ و نمایش در صفحه
+    function logStatus(msg) {
+      console.log(msg);
+      document.getElementById('status').innerText = 'وضعیت: ' + msg;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      try {
+        // اگر به هر دلیلی map قبلا ساخته شده بود، حذفش کن
+        // (برای محیط‌هایی مثل HMR یا ریلود سریع)
+        if (window._myLeafletMap) {
+          window._myLeafletMap.remove();
+          window._myLeafletMap = null;
+        }
+
+        // ایجاد نقشه
+        var map = L.map('map').setView([35.6892, 51.3890], 12); // مرکز پیش‌فرض: تهران
+        window._myLeafletMap = map; // نگه‌داشتن در window برای دسترسی دیباگ
+
+        // لایهٔ موزاییک (tiles)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        var marker;
+        function setMarker(lat, lon) {
+          if (marker) map.removeLayer(marker);
+          marker = L.marker([lat, lon]).addTo(map);
+          logStatus('مارکر قرار گرفت: ' + lat.toFixed(6) + ', ' + lon.toFixed(6));
+        }
+
+        // کلیک روی نقشه برای انتخاب موقعیت
+        map.on('click', function (e) {
+          setMarker(e.latlng.lat, e.latlng.lng);
+        });
+
+        // دکمه: قرار دادن مارکر روی موقعیت فعلی (Geolocation)
+        document.getElementById('btn-locate').addEventListener('click', function () {
+          if (!navigator.geolocation) {
+            logStatus('Geolocation پشتیبانی نمی‌شود.');
+            return;
+          }
+          logStatus('در حال دریافت موقعیت (اجازه دهید)...');
+          navigator.geolocation.getCurrentPosition(function (pos) {
+            var lat = pos.coords.latitude;
+            var lon = pos.coords.longitude;
+            map.setView([lat, lon], 15);
+            setMarker(lat, lon);
+          }, function (err) {
+            logStatus('خطا در گرفتن موقعیت: ' + (err.message || err.code));
+          }, { timeout: 10000 });
+        });
+
+        // دکمه: invalidateSize (برای مواردی که کانتینر اول پنهان بوده)
+        document.getElementById('btn-invalidate').addEventListener('click', function () {
+          map.invalidateSize();
+          logStatus('invalidateSize اجرا شد');
+        });
+
+        logStatus('نقشه با موفقیت ساخته شد ✅');
+      } catch (e) {
+        console.error('خطا در ساخت نقشه:', e);
+        logStatus('خطا در ساخت نقشه — کنسول را چک کنید');
+      }
+    });
+  </script>
+</body>
+</html>
