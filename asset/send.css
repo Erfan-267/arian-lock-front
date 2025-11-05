@@ -6,7 +6,7 @@ body {
       color: #FFFF00;
       line-height: 1.8;
     }
-
+ 
 
     
 
@@ -53,5 +53,9 @@ body {
       font-size: 20px;
       color: #171818;
     }
-
+@media screen and (min-width:360px) and (max-width:600px){
+  .shipping-container{
+    margin: 7px 7px;
+  }
+}
     
