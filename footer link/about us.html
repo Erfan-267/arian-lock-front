@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Arian Lock | درباره ما</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link rel="stylesheet" href="../asset/style.css">
+    <link rel="stylesheet" href="../asset/abuot us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="shortcut icon" href="../image/arian lock logo.png" type="image/x-icon">
+    <style>
+    body {
+      margin: 0;
+      font-family: 'Samim';
+      background: black;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      background: linear-gradient(135deg, #FFFF00,#474707);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: black;
+      /* font-weight: bold; */
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+      color: #171818;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+      color: #FFFF00;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      font-size: 1rem;
+      color: white;
+      max-width: 850px;
+      margin: auto;
+      font-weight: bold;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #FFFF00;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      
+    }
+
+    
+
+    .card h3 {
+      margin: 15px 0;
+      color: black;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #171818;
+      font-weight: bold;
+    }
+
+    
+  </style>
 </head>
 <body>
-    
+    <header>
+    <h1>درباره ما</h1>
+    <p>تجربه‌ای متفاوت در خرید قطعات و سیستم‌های کامپیوتری</p>
+  </header>
+
+  <section class="container">
+    <div class="intro">
+      <h2>ما کی هستیم؟</h2>
+      <p>
+        فروشگاه ما با تمرکز بر عرضه <strong>قطعات کامپیوتر، لپ‌تاپ، لوازم جانبی و تجهیزات گیمینگ</strong> 
+        ایجاد شد تا تجربه‌ای حرفه‌ای و مطمئن در خرید آنلاین برای کاربران فراهم کند.  
+        تیم متخصص ما علاوه بر فروش محصولات باکیفیت، همواره آماده ارائه مشاوره جهت انتخاب 
+        بهترین قطعات متناسب با نیاز شماست.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="card">
+        <h3>تنوع محصولات</h3>
+        <p>از مادربرد و پردازنده گرفته تا کارت گرافیک و کیس، همه در یک جا.</p>
+      </div>
+      <div class="card">
+        <h3>قیمت رقابتی</h3>
+        <p>عرضه مستقیم و به‌روز با بهترین قیمت بازار کامپیوتر.</p>
+      </div>
+      <div class="card">
+        <h3>مشاوره تخصصی</h3>
+        <p>انتخاب قطعات مناسب برای اسمبل سیستم‌های خانگی و گیمینگ.</p>
+      </div>
+      <div class="card">
+        <h3>پشتیبانی حرفه‌ای</h3>
+        <p>پاسخگویی سریع و پشتیبانی آنلاین توسط کارشناسان IT.</p>
+      </div>
+    </div>
+  </section>
+    <script src="../script/jquery3.7.1.js"></script>
+    <script src="../script/jquery.toast.js"></script>
+    <script src="../script/main.js"></script>
 </body>
 </html>
