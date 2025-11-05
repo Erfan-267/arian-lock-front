@@ -65,3 +65,7 @@
 .link-selected{
     color: #FFFF00;
 }
+
+.OutLine{
+    outline: none;
+}

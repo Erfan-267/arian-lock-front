@@ -282,26 +282,50 @@
                     <div class="flex justify-start items-center px-6 w-[100%] h-15 flex-row-reverse">
                         <span class="text-[1.3rem] text-[#FFFF00] font-bold">تیکت</span>
                     </div>
-                    <div>
-                        <form action="">
-                            <div>
-                                <label for=""></label>
-                                <textarea name="" id=""></textarea>
-
-                            </div>
-                            <div>
-                                <label for=""></label>
-                                <section>
-                                    <input type="radio" name="" id="">
-                                    <input type="radio" name="" id="">
-                                    <input type="radio" name="" id="">
-                                    <input type="radio" name="" id="">
-                                    <input type="radio" name="" id="">
-                                    <input type="radio" name="" id="">
-                                    <input type="radio" name="" id="">
+                    <div class="w-[100%] h-100 max-sm:h-130">
+                        <form action="" method="post" class="w-[100%] h-[100%] flex flex-wrap ">
+                            <div class="w-1/2 h-90 flex flex-col justify-center items-center gap-5 max-sm:w-[100%] max-sm:h-65 max-lg:gap-2">
+                                <label for="" class="text-white text-[1.3rem] font-bold">عنوان درخواست</label>
+                                <section class="w-60 h-50 rounded-md border-y-2 border-[#FFFF00] max-lg:w-50 ">
+                                    <span class="w-[100%] h-10 flex items-center flex-row-reverse gap-2 pr-2 text-white text-[1rem] justify-start font-bold max-lg:gap-1 max-lg:pr-1 max-lg:text-[0.9rem] "><input type="radio" name="question_tit" id="" value="" class="w-5 h-5 cursor-pointer bg-[#FFFF00]"><span class="dir-text">مشاوره در انتخاب و خرید محصول</span></span>
+                                    <span class="w-[100%] h-10 flex items-center flex-row-reverse gap-2 pr-2 text-white text-[1rem] justify-start font-bold max-lg:gap-1 max-lg:pr-1 max-lg:text-[0.9rem] "><input type="radio" name="question_tit" id="" value="" class="w-5 h-5 cursor-pointer bg-[#FFFF00]"><span class="dir-text">مشکل در ورود و ثبت نام</span></span>
+                                    <span class="w-[100%] h-10 flex items-center flex-row-reverse gap-2 pr-2 text-white text-[1rem] justify-start font-bold max-lg:gap-1 max-lg:pr-1 max-lg:text-[0.9rem] "><input type="radio" name="question_tit" id="" value="" class="w-5 h-5 cursor-pointer bg-[#FFFF00]"><span class="dir-text">مشکل در خرید و ثبت سفارش</span></span>
+                                    <span class="w-[100%] h-10 flex items-center flex-row-reverse gap-2 pr-2 text-white text-[1rem] justify-start font-bold max-lg:gap-1 max-lg:pr-1 max-lg:text-[0.9rem] "><input type="radio" name="question_tit" id="" value="" class="w-5 h-5 cursor-pointer bg-[#FFFF00]"><span class="dir-text">مشکل در ارسال و دریافت سفارش</span></span>
+                                    <span class="w-[100%] h-10 flex items-center flex-row-reverse gap-2 pr-2 text-white text-[1rem] justify-start font-bold max-lg:gap-1 max-lg:pr-1 max-lg:text-[0.9rem] "><input type="radio" name="question_tit" id="" value="" class="w-5 h-5 cursor-pointer bg-[#FFFF00]"><span class="dir-text">سایر درخواست ها و مشکلات</span></span>
                                 </section>
                             </div>
+                            <div class="w-1/2 h-[90%] flex flex-col justify-center items-center gap-5 max-sm:w-[100%] max-sm:h-55 max-lg:gap-2">
+                                <label for="" class="text-white text-[1.3rem] font-bold">متن درخواست</label>
+                                <textarea name="question" id="" placeholder="سوال خود را وارد کنید..." class="w-70 h-70 bg-white border-3 border-[#FFFF00] rounded-lg dir-text px-2 OutLine max-sm:h-40 max-lg:w-60 max-lg:h-55 "></textarea>
+                                
+                            </div>
+                            
+                            <div class="w-[100%] h-10 flex items-center justify-start px-2">
+                                <button type="submit" class="w-23 h-7 bg-[#FFFF00] rounded-md text-black text-[1.3rem] font-bold cursor-pointer">ارسال</button>
+                            </div>
                         </form>
+                    </div>
+                    <div class="w-[100%] h-auto flex flex-col items-center gap-3 py-2">
+                        <div class="w-75 h-auto rounded-md bg-[#FFFF00]">
+                            <section class="w-[100%] h-auto ">
+                                <section class="w-[100%] h-8 flex justify-between items-center px-2 font-bold text-[1rem] text-black flex-row-reverse">
+                                    <span>مشاوره در انتخاب و سفارش محصول</span>
+                                    <span>1386/7/26</span>
+                                </section>
+                                <section class="w-[100%] h-auto px-3 py-1">
+                                    <p class="dir-text">نوشتار (به انگلیسی: Text) (در عربی: اَلْمَتْنْ) در فلسفۀ ادبیات نوشته‌ای است که قابلیت آن را دارد تا توسط شمار نامحدودی از مخاطبان به گفتار زنده تبدیل شود. به این ترتیب، نوشتار گفتمانی است که با نوشتن تثبیت شده‌است و بیان‌کننده احساسات، عواطف، کنش‌ها، واکنش‌ها و هر معنای کاملی است که نویسنده، در قالب آن، به مخاطب می‌رساند؛ و از این رو که می‌تواند مخاطبانی در بینهایت زمان و مکان داشته باشد، محیرالعقول است. متن، جادوی رسانه است.[۱]</p>
+                                </section>
+                            </section>
+                            <section class="w-[100%] h-auto bg-gray-200 rounded-md">
+                                <section class="w-[100%] h-8 flex justify-between items-center px-2 font-bold text-[1rem] text-[#171818] flex-row-reverse">
+                                    <span>پاسخ</span>
+                                    <span>1386/7/26</span>
+                                </section>
+                                <section class="w-[100%] h-auto px-3 py-1">
+                                    <p class="dir-text text-[#171818]">واقعیت یک نوشتار باید قابل درک باشد، خواه به وسیله حواس مانند درک خطوط، اشکال و ایماها و اشاره‌ها یا ادراک پدیدار شناسانه مانند ادراک تصورات ذهنی.</p>
+                                </section>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
