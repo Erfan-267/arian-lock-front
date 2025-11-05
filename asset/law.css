@@ -1,0 +1,70 @@
+
+
+    /* فونت و رنگ‌بندی پایه */
+    body {
+        
+        background-color: black;
+        
+        line-height: 1.6;
+    }
+
+    /* هدر صفحه */
+    
+
+    /* کانتینر محتوا */
+    .container {
+        max-width: 1000px;
+        margin: 30px auto;
+        background-color: #171818;
+        padding: 30px 20px;
+        border-radius: 20px;
+        border: 1px solid #FFFF00;
+        /* box-shadow: 1px 1px  15px 1px #999999; */
+    }
+    .orginal{
+        text-align: center;
+        color: #FFFF00;
+        
+    }
+
+    /* تیتر بخش‌ها */
+    h2 {
+        color: #FFFF00;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #FFFF00;
+        padding-bottom: 5px;
+        direction: rtl;
+    }
+
+    /* پاراگراف‌ها */
+    p {
+        margin-bottom: 20px;
+        text-align: justify;
+        direction: rtl;
+        color: white;
+        font-weight: bold;
+    }
+
+    /* لیست‌ها */
+    ul {
+        
+        margin-bottom: 15px;
+        direction: rtl;
+        list-style: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    /* ریسپانسیو */
+    @media (max-width: 768px) {
+        .container {
+            padding: 13px;
+            margin: 5px;
+        }
+        
+    }
