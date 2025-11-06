@@ -69,3 +69,7 @@
 .OutLine{
     outline: none;
 }
+.selectedBtn{
+    background-color: #FFFF00;
+    color: #171818;
+}
