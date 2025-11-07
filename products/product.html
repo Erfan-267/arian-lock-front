@@ -10,10 +10,27 @@
     <link rel="shortcut icon" href="../image/arian lock logo.png" type="image/x-icon">
 </head>
 <body class="bg-black">
+    <main class="w-[100%] h-[100svh] hidden z-800 bg-black showImgCont">
+        <div class="w-[100%] h-[100%] relative flex justify-center items-center">
+            <img src="../image/bullock-antifurto-defender.png" alt="" class="w-auto h-[100%] IMG absolute hidden bg-white max-md:w-[100%] max-md:h-auto" >
+            <img src="../image/bullock-additivi.png" alt="" class="w-auto h-[100%] IMG absolute hidden bg-white max-md:w-[100%] max-md:h-auto">
+            <img src="../image/bullock-additivi-per-bisogni-specifici.png" alt="" class="w-auto h-[100%] IMG absolute hidden bg-white max-md:w-[100%] max-md:h-auto">
+            <img src="../image/bullock-additivi-ad-azione-migliorativa.png" alt="" class="w-auto h-[100%] IMG absolute hidden bg-white max-md:w-[100%] max-md:h-auto">
+            <img src="../image/bullock-antifurto-defender.png" alt="" class="w-auto h-[100%] IMG absolute hidden bg-white max-md:w-[100%] max-md:h-auto">
+
+            <span class="btn absolute text-[#FFFF00] text-[50px] top-[calc(50%-25px)] left-5 cursor-pointer " id="btnImage1" onclick="controlImg(-1)">&#10094;</span>
+            <span class="btn absolute text-[#FFFF00] text-[50px] top-[calc(50%-25px)] right-5 cursor-pointer" id="btnImage2" onclick="controlImg(1)">&#10095;</span>
+            <span class="absolute cursor-pointer top-2 left-2 closeBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-20 h-20 max-md:w-10 max-md:h-10" style="fill: #434646;"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M160 96C124.7 96 96 124.7 96 160L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 160C544 124.7 515.3 96 480 96L160 96zM231 231C240.4 221.6 255.6 221.6 264.9 231L319.9 286L374.9 231C384.3 221.6 399.5 221.6 408.8 231C418.1 240.4 418.2 255.6 408.8 264.9L353.8 319.9L408.8 374.9C418.2 384.3 418.2 399.5 408.8 408.8C399.4 418.1 384.2 418.2 374.9 408.8L319.9 353.8L264.9 408.8C255.5 418.2 240.3 418.2 231 408.8C221.7 399.4 221.6 384.2 231 374.9L286 319.9L231 264.9C221.6 255.5 221.6 240.3 231 231z"/></svg>
+            </span>
+        </div>
+    </main>
+
+
     <main class="w-[100%] h-[85svh] flex flex-row-reverse max-md:flex-col max-sm:h-[150svh] max-md:h-[140svh] border-b-1 border-[#FFFF00]">
         <div class="w-1/2 h-[100%] max-md:w-[100%] max-sm:h-1/2 max-md:h-[53%] sm:flex md:flex-col">
             <div class="w-[100%] h-[80%] flex justify-center items-center sm:w-[80%] sm:h-[100%] md:w-[100%] md:h-[80%]">
-                <img src="../image/bullock-antifurto-defender.png" alt="" class="w-auto h-[98%] bg-white  rounded-md max-sm:w-[90%] max-md:w-[80%] max-lg:w-[90%] max-lg:h-auto" >
+                <img src="../image/bullock-antifurto-defender.png" alt="" class="w-auto h-[98%] bg-white  rounded-md max-sm:w-[90%] max-md:w-[80%] max-lg:w-[90%] max-lg:h-auto" onclick="showImgCont()">
             </div>
             <div class="w-[100%] h-[20%] flex justify-center gap-5 items-center max-sm:gap-2 sm:w-[20%] sm:h-[100%] sm:flex-col md:w-[100%] md:h-[20%] md:flex-row">
                 <img src="../image/bullock-additivi.png" alt="" class="w-25 h-25 bg-white  rounded-sm max-sm:w-20 max-sm:h-20 max-lg:w-23 max-lg:h-23">
@@ -52,13 +69,24 @@
                         </section>
                     </section>
                     <section class="w-[100%] h-1/3 ">
-                        <section class="flex items-end justify-start p-2 gap-2 w-[100%] h-[80%] flex-row-reverse">
-                            <input type="radio" name="color" id="" value="" class="w-10 h-10 rounded-full " checked>
-                            <input type="radio" name="color" id="" value="" class="w-10 h-10 rounded-full ">
-                            <input type="radio" name="color" id="" value="" class="w-10 h-10 rounded-full ">
-                            <input type="radio" name="color" id="" value="" class="w-10 h-10 rounded-full ">
-                            <input type="radio" name="color" id="" value="" class="w-10 h-10 rounded-full ">
+                        <section class="flex items-end justify-start p-2 gap-2 w-full h-[80%] flex-row-reverse">
+                        <!-- فرض کن رنگ‌ها از دیتابیس میان -->
+                            <input type="radio" name="color" value="#f87171"
+                                class="appearance-none w-10 h-10 rounded-full border-2 border-gray-300 bg-[#f87171] checked:ring-4 checked:ring-yellow-400 cursor-pointer transition" checked>
+
+                            <input type="radio" name="color" value="#34d399"
+                                class="appearance-none w-10 h-10 rounded-full border-2 border-gray-300 bg-[#34d399] checked:ring-4 checked:ring-yellow-400 cursor-pointer transition">
+
+                            <input type="radio" name="color" value="#60a5fa"
+                                class="appearance-none w-10 h-10 rounded-full border-2 border-gray-300 bg-[#60a5fa] checked:ring-4 checked:ring-yellow-400 cursor-pointer transition">
+
+                            <input type="radio" name="color" value="#facc15"
+                                class="appearance-none w-10 h-10 rounded-full border-2 border-gray-300 bg-[#facc15] checked:ring-4 checked:ring-yellow-400 cursor-pointer transition">
+
+                            <input type="radio" name="color" value="#a78bfa"
+                                class="appearance-none w-10 h-10 rounded-full border-2 border-gray-300 bg-[#a78bfa] checked:ring-4 checked:ring-yellow-400 cursor-pointer transition">
                         </section>
+
                         <section class="w-[100%] h-[20%] flex justify-end items-start p-2">
                             <span class="dir-text text-[0.9rem] text-red-500">فقط 2 عدد در انبار باقی مانده است</span>
                         </section>
@@ -100,38 +128,196 @@
             <!-- options -->
             <div class="pro-data w-[100%] h-auto hidden flex items-center gap-3 py-5 flex-col">
                 <span class="text-[1.6rem] text-white font-bold">ویژگی ها</span>
-                <section class="w-[90%] h-auto min-h-15 bg-[#171818] rounded-md flex justify-between items-center px-3 flex-row-reverse text-[1.3rem] font-bold max-md:w-[95%] max-md:text-[1rem] max-md:px-1">
-                    <span class="text-[#FFFF00] ">اسم</span>
-                    <span class="text-white ">محصول آزمایشی</span>
+                <section class="w-[90%] h-auto min-h-15 bg-[#171818] rounded-md flex justify-between items-center px-3 flex-row-reverse text-[1.3rem] font-bold max-md:w-[95%] max-md:text-[1rem] max-md:px-1 max-sm:text-[0.8rem]">
+                    <span class="text-[#FFFF00] w-1/2 h-[100%] flex items-center justify-end">اسم</span>
+                    <span class="text-white w-1/2 h-[100%] flex items-center justify-start">محصول آزمایشی</span>
                 </section>
-                <section class="w-[90%] h-auto min-h-15 bg-[#171818] rounded-md flex justify-between items-center px-3 flex-row-reverse text-[1.3rem] font-bold max-md:w-[95%] max-md:text-[1rem] max-md:px-1">
-                    <span class="text-[#FFFF00] ">ماشین های قابل استفاده</span>
-                    <span class="text-white ">پراید ، 206 ، سمند ، کوییک</span>
+                <section class="w-[90%] h-auto min-h-15 bg-[#171818] rounded-md flex justify-between items-center px-3 flex-row-reverse text-[1.3rem] font-bold max-md:w-[95%] max-md:text-[1rem] max-md:px-1 max-sm:text-[0.8rem]">
+                    <span class="text-[#FFFF00] w-1/2 h-[100%] flex items-center justify-end">ماشین های قابل استفاده</span>
+                    <span class="text-white w-1/2 h-[100%] flex items-center justify-start">پراید ، 206 ، سمند ، کوییک</span>
                 </section>
-                <section class="w-[90%] h-auto min-h-15 bg-[#171818] rounded-md flex justify-between items-center px-3 flex-row-reverse text-[1.3rem] font-bold max-md:w-[95%] max-md:text-[1rem] max-md:px-1">
-                    <span class="text-[#FFFF00] ">مدل</span>
-                    <span class="text-white ">G-73btn</span>
+                <section class="w-[90%] h-auto min-h-15 bg-[#171818] rounded-md flex justify-between items-center px-3 flex-row-reverse text-[1.3rem] font-bold max-md:w-[95%] max-md:text-[1rem] max-md:px-1 max-sm:text-[0.8rem]">
+                    <span class="text-[#FFFF00] w-1/2 h-[100%] flex items-center justify-end">مدل</span>
+                    <span class="text-white w-1/2 h-[100%] flex items-center justify-start">G-73btn</span>
                 </section>
-                <section class="w-[90%] h-auto min-h-15 bg-[#171818] rounded-md flex justify-between items-center px-3 flex-row-reverse text-[1.3rem] font-bold max-md:w-[95%] max-md:text-[1rem] max-md:px-1">
-                    <span class="text-[#FFFF00] ">اندازه</span>
-                    <span class="text-white ">25"x36"x100"</span>
+                <section class="w-[90%] h-auto min-h-15 bg-[#171818] rounded-md flex justify-between items-center px-3 flex-row-reverse text-[1.3rem] font-bold max-md:w-[95%] max-md:text-[1rem] max-md:px-1 max-sm:text-[0.8rem]">
+                    <span class="text-[#FFFF00] w-1/2 h-[100%] flex items-center justify-end">اندازه</span>
+                    <span class="text-white w-1/2 h-[100%] flex items-center justify-start">25"x36"x100"</span>
                 </section>
-                <section class="w-[90%] h-auto min-h-15 bg-[#171818] rounded-md flex justify-between items-center px-3 flex-row-reverse text-[1.3rem] font-bold max-md:w-[95%] max-md:text-[1rem] max-md:px-1">
-                    <span class="text-[#FFFF00] ">برند</span>
-                    <span class="text-white ">آرین لاک</span>
+                <section class="w-[90%] h-auto min-h-15 bg-[#171818] rounded-md flex justify-between items-center px-3 flex-row-reverse text-[1.3rem] font-bold max-md:w-[95%] max-md:text-[1rem] max-md:px-1 max-sm:text-[0.8rem]">
+                    <span class="text-[#FFFF00] w-1/2 h-[100%] flex items-center justify-end">برند</span>
+                    <span class="text-white w-1/2 h-[100%] flex items-center justify-start">آرین لاک</span>
                 </section>
-                <section class="w-[90%] h-auto min-h-15 bg-[#171818] rounded-md flex justify-between items-center px-3 flex-row-reverse text-[1.3rem] font-bold max-md:w-[95%] max-md:text-[1rem] max-md:px-1">
-                    <span class="text-[#FFFF00] ">جنس</span>
-                    <span class="text-white ">آلیاژ کربنی</span>
+                <section class="w-[90%] h-auto min-h-15 bg-[#171818] rounded-md flex justify-between items-center px-3 flex-row-reverse text-[1.3rem] font-bold max-md:w-[95%] max-md:text-[1rem] max-md:px-1 max-sm:text-[0.8rem]">
+                    <span class="text-[#FFFF00] w-1/2 h-[100%] flex items-center justify-end">جنس</span>
+                    <span class="text-white w-1/2 h-[100%] flex items-center justify-start">آلیاژ کربنی</span>
                 </section>
             </div>
             <!-- comments -->
-            <div class="pro-data">
-                <div></div>
-                <div></div>
+            <div class="pro-data w-[100%] h-100 hidden flex flex-row-reverse max-md:flex-col max-md:h-auto">
+                <div class="w-[30%] h-100 max-md:w-[100%]">
+                    <form action="" method="post" class="w-[100%] h-[100%] flex flex-col gap-4 p-4 justify-between shadow-md">
+
+                        <!-- عنوان -->
+                        <h2 class="text-lg font-semibold text-white text-center">ارسال نظر شما</h2>
+
+                        <!-- بخش امتیازدهی -->
+                        <div class="flex flex-col gap-2">
+                        <label class="text-white dir-text font-medium">امتیاز شما به محصول:</label>
+
+                        <div id="rating-stars" class="flex gap-1 text-3xl cursor-pointer justify-center">
+                            <span data-value="1" class="text-gray-300 hover:text-[#FFFF00] transition">★</span>
+                            <span data-value="2" class="text-gray-300 hover:text-[#FFFF00] transition">★</span>
+                            <span data-value="3" class="text-gray-300 hover:text-[#FFFF00] transition">★</span>
+                            <span data-value="4" class="text-gray-300 hover:text-[#FFFF00] transition">★</span>
+                            <span data-value="5" class="text-gray-300 hover:text-[#FFFF00] transition">★</span>
+                        </div>
+
+                        <!-- مقدار نهایی امتیاز -->
+                        <input type="hidden" name="rating" id="rating-value" value="0">
+                        </div>
+
+                        <!-- فیلد متن نظر -->
+                        <textarea 
+                        name="comment" 
+                        rows="4" 
+                        placeholder="نظر خود را بنویسید..."
+                        class="border border-[#171818] rounded-lg p-2 focus:outline-none focus:border-[#FFFF00] bg-white dir-text"
+                        required
+                        ></textarea>
+
+    
+
+                        <!-- دکمه ارسال -->
+                        <button 
+                        type="submit" 
+                        class="bg-[#FFFF00]  text-black font-bold py-2 rounded-lg transition"
+                        >
+                        ارسال نظر
+                        </button>
+                    </form>
+
+                </div>
+                <div class="w-[70%] h-auto flex items-end p-7 flex-col gap-5 max-md:w-[100%] max-sm:items-center max-sm:p-0 max-sm:py-3 max-sm:gap-3  overflow-scroll show-all-comments max-md:overflow-visible">
+                    <div class="w-130 h-auto bg-[#171818] rounded-md max-sm:w-[90%] max-lg:w-110">
+                        <section class="w-[100%] h-10 flex items-center justify-between text-white flex-row-reverse px-3 font-bold max-md:text-[1rem]">
+                            <span>ninjacraft267</span>
+                            <span>2025/7/11</span>
+                        </section>
+                        <section class="w-[100%] h-auto">
+                            <p class="m-3 dir-text text-white text-[1.1rem]">واقعیت یک نوشتار باید قابل درک باشد، خواه به وسیله حواس مانند درک خطوط، اشکال و ایماها و اشاره‌ها یا ادراک پدیدار شناسانه مانند ادراک تصورات ذهنی.
+این واقعیات قابل ادراک باید به عنوان نشانه‌ها به کار روند، یعنی آنها باید معنادار باشند. این نشانه‌ها باید به گونه‌ای انتخاب و تنظیم شوند که نوشتار‌نگار (نویسنده و…) بتواند معنای مشخصی را به شنونده در یک بافت معین منتقل سازد.</p>
+                        </section>
+                    </div>
+                    <div class="w-130 h-auto bg-[#171818] rounded-md max-sm:w-[90%] max-lg:w-110">
+                        <section class="w-[100%] h-10 flex items-center justify-between text-white flex-row-reverse px-3 font-bold">
+                            <span>ninjacraft267</span>
+                            <span>2025/7/11</span>
+                        </section>
+                        <section class="w-[100%] h-auto">
+                            <p class="m-3 dir-text text-white text-[1.1rem]">واقعیت یک نوشتار باید قابل درک باشد، خواه به وسیله حواس مانند درک خطوط، اشکال و ایماها و اشاره‌ها یا ادراک پدیدار شناسانه مانند ادراک تصورات ذهنی.
+این واقعیات قابل ادراک باید به عنوان نشانه‌ها به کار روند، یعنی آنها باید معنادار باشند. این نشانه‌ها باید به گونه‌ای انتخاب و تنظیم شوند که نوشتار‌نگار (نویسنده و…) بتواند معنای مشخصی را به شنونده در یک بافت معین منتقل سازد.</p>
+                        </section>
+                    </div>
+                    <div class="w-130 h-auto bg-[#171818] rounded-md max-sm:w-[90%] max-lg:w-110">
+                        <section class="w-[100%] h-10 flex items-center justify-between text-white flex-row-reverse px-3 font-bold">
+                            <span>ninjacraft267</span>
+                            <span>2025/7/11</span>
+                        </section>
+                        <section class="w-[100%] h-auto">
+                            <p class="m-3 dir-text text-white text-[1.1rem]">واقعیت یک نوشتار باید قابل درک باشد، خواه به وسیله حواس مانند درک خطوط، اشکال و ایماها و اشاره‌ها یا ادراک پدیدار شناسانه مانند ادراک تصورات ذهنی.
+این واقعیات قابل ادراک باید به عنوان نشانه‌ها به کار روند، یعنی آنها باید معنادار باشند. این نشانه‌ها باید به گونه‌ای انتخاب و تنظیم شوند که نوشتار‌نگار (نویسنده و…) بتواند معنای مشخصی را به شنونده در یک بافت معین منتقل سازد.</p>
+                        </section>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+
+    <span class="w-[100%] h-15 flex justify-center items-center text-[2.5rem] text-[#FFFF00] max-md:h-10 max-md:text-[1.5rem] font-bold">محصولات مشابه</span>
+
+    <main class="w-[100%] h-auto brands-cont  border-t-1 border-gray-500 rtl dir-cont max-md:h-80">
+            <div class="w-[100%] h-[100%] flex shrink-0 flex-wrap border-r-1 border-gray-500 ">
+
+                <!-- foreach -->
+
+                <section class="w-1/2 h-1/2 border-l-1 border-b-1 border-gray-500 hover:bg-[#171818] duration-300 flex 2xl:w-1/3 max-md:w-[100%]">
+                    <div class="w-[60%] h-[100%] flex flex-col justify-center gap-4 items-start pr-10 max-md:pr-5 max-md:gap-3 max-sm:pr-2">
+                        <span class="text-[2.1rem] text-[#FFFF00] font-bold dir-text max-md:text-[1.3rem] max-lg:text-[1.6rem] text-right">محصول آزمایشی</span>
+                        <span class="text-[1.7rem] text-white font-bold max-md:text-[1.1rem] max-lg:text-[1.3rem]">3,750,000</span>
+                        <a href="" class="text-[1.3rem] bg-black text-[#FFFF00] flex justify-center items-center w-30 h-9 border-1 border-[#FFFF00] rounded-lg duration-300 hover:shadow-[#FFFF00] hover:shadow-md max-md:text-[1rem] max-md:w-18 max-lg:h-8 max-lg:text-[1.1rem] max-lg:w-22 ">نظاره
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-5 h-5 max-md:h-3 max-md:w-3" style="fill: #FFFF00;"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z"/></svg>
+                        </a>
+                    </div>
+                    <div class="w-[40%] h-[100%] flex justify-center items-center">
+                        <img src="../image/bullock-additivi-ad-azione-migliorativa.png" alt="" class="h-[90%] w-auto max-lg:h-[80%]" loading="lazy">
+                    </div>
+                </section>
+
+                <section class="w-1/2 h-1/2 border-l-1 border-b-1 border-gray-500 hover:bg-[#171818] duration-300 flex 2xl:w-1/3 max-md:w-[100%]">
+                    <div class="w-[60%] h-[100%] flex flex-col justify-center gap-4 items-start pr-10 max-md:pr-5 max-md:gap-3 max-sm:pr-2">
+                        <span class="text-[2.1rem] text-[#FFFF00] font-bold dir-text max-md:text-[1.3rem] max-lg:text-[1.6rem] text-right">محصول آزمایشی</span>
+                        <span class="text-[1.7rem] text-white font-bold max-md:text-[1.1rem] max-lg:text-[1.3rem]">3,750,000</span>
+                        <a href="" class="text-[1.3rem] bg-black text-[#FFFF00] flex justify-center items-center w-30 h-9 border-1 border-[#FFFF00] rounded-lg duration-300 hover:shadow-[#FFFF00] hover:shadow-md max-md:text-[1rem] max-md:w-18 max-lg:h-8 max-lg:text-[1.1rem] max-lg:w-22 ">نظاره
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-5 h-5 max-md:h-3 max-md:w-3" style="fill: #FFFF00;"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z"/></svg>
+                        </a>
+                    </div>
+                    <div class="w-[40%] h-[100%] flex justify-center items-center">
+                        <img src="../image/bullock-additivi-ad-azione-migliorativa.png" alt="" class="h-[90%] w-auto max-lg:h-[80%]" loading="lazy">
+                    </div>
+                </section>
+                <section class="w-1/2 h-1/2 border-l-1 border-b-1 border-gray-500 hover:bg-[#171818] duration-300 flex 2xl:w-1/3 max-md:w-[100%]">
+                    <div class="w-[60%] h-[100%] flex flex-col justify-center gap-4 items-start pr-10 max-md:pr-5 max-md:gap-3 max-sm:pr-2">
+                        <span class="text-[2.1rem] text-[#FFFF00] font-bold dir-text max-md:text-[1.3rem] max-lg:text-[1.6rem] text-right">محصول آزمایشی</span>
+                        <span class="text-[1.7rem] text-white font-bold max-md:text-[1.1rem] max-lg:text-[1.3rem]">3,750,000</span>
+                        <a href="" class="text-[1.3rem] bg-black text-[#FFFF00] flex justify-center items-center w-30 h-9 border-1 border-[#FFFF00] rounded-lg duration-300 hover:shadow-[#FFFF00] hover:shadow-md max-md:text-[1rem] max-md:w-18 max-lg:h-8 max-lg:text-[1.1rem] max-lg:w-22 ">نظاره
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-5 h-5 max-md:h-3 max-md:w-3" style="fill: #FFFF00;"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z"/></svg>
+                        </a>
+                    </div>
+                    <div class="w-[40%] h-[100%] flex justify-center items-center">
+                        <img src="../image/bullock-additivi-ad-azione-migliorativa.png" alt="" class="h-[90%] w-auto max-lg:h-[80%]" loading="lazy">
+                    </div>
+                </section>
+                <section class="w-1/2 h-1/2 border-l-1 border-b-1 border-gray-500 hover:bg-[#171818] duration-300 flex 2xl:w-1/3 max-md:w-[100%]">
+                    <div class="w-[60%] h-[100%] flex flex-col justify-center gap-4 items-start pr-10 max-md:pr-5 max-md:gap-3 max-sm:pr-2">
+                        <span class="text-[2.1rem] text-[#FFFF00] font-bold dir-text max-md:text-[1.3rem] max-lg:text-[1.6rem] text-right">محصول آزمایشی</span>
+                        <span class="text-[1.7rem] text-white font-bold max-md:text-[1.1rem] max-lg:text-[1.3rem]">3,750,000</span>
+                        <a href="" class="text-[1.3rem] bg-black text-[#FFFF00] flex justify-center items-center w-30 h-9 border-1 border-[#FFFF00] rounded-lg duration-300 hover:shadow-[#FFFF00] hover:shadow-md max-md:text-[1rem] max-md:w-18 max-lg:h-8 max-lg:text-[1.1rem] max-lg:w-22 ">نظاره
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-5 h-5 max-md:h-3 max-md:w-3" style="fill: #FFFF00;"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z"/></svg>
+                        </a>
+                    </div>
+                    <div class="w-[40%] h-[100%] flex justify-center items-center">
+                        <img src="../image/bullock-additivi-ad-azione-migliorativa.png" alt="" class="h-[90%] w-auto max-lg:h-[80%]" loading="lazy">
+                    </div>
+                </section>
+                <section class="w-1/2 h-1/2 border-l-1 border-b-1 border-gray-500 hover:bg-[#171818] duration-300 flex 2xl:w-1/3 max-md:w-[100%]">
+                    <div class="w-[60%] h-[100%] flex flex-col justify-center gap-4 items-start pr-10 max-md:pr-5 max-md:gap-3 max-sm:pr-2">
+                        <span class="text-[2.1rem] text-[#FFFF00] font-bold dir-text max-md:text-[1.3rem] max-lg:text-[1.6rem] text-right">محصول آزمایشی</span>
+                        <span class="text-[1.7rem] text-white font-bold max-md:text-[1.1rem] max-lg:text-[1.3rem]">3,750,000</span>
+                        <a href="" class="text-[1.3rem] bg-black text-[#FFFF00] flex justify-center items-center w-30 h-9 border-1 border-[#FFFF00] rounded-lg duration-300 hover:shadow-[#FFFF00] hover:shadow-md max-md:text-[1rem] max-md:w-18 max-lg:h-8 max-lg:text-[1.1rem] max-lg:w-22 ">نظاره
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-5 h-5 max-md:h-3 max-md:w-3" style="fill: #FFFF00;"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z"/></svg>
+                        </a>
+                    </div>
+                    <div class="w-[40%] h-[100%] flex justify-center items-center">
+                        <img src="../image/bullock-additivi-ad-azione-migliorativa.png" alt="" class="h-[90%] w-auto max-lg:h-[80%]" loading="lazy">
+                    </div>
+                </section>
+                <section class="w-1/2 h-1/2 border-l-1 border-b-1 border-gray-500 hover:bg-[#171818] duration-300 flex 2xl:w-1/3 max-md:w-[100%]">
+                    <div class="w-[60%] h-[100%] flex flex-col justify-center gap-4 items-start pr-10 max-md:pr-5 max-md:gap-3 max-sm:pr-2">
+                        <span class="text-[2.1rem] text-[#FFFF00] font-bold dir-text max-md:text-[1.3rem] max-lg:text-[1.6rem] text-right">محصول آزمایشی</span>
+                        <span class="text-[1.7rem] text-white font-bold max-md:text-[1.1rem] max-lg:text-[1.3rem]">3,750,000</span>
+                        <a href="" class="text-[1.3rem] bg-black text-[#FFFF00] flex justify-center items-center w-30 h-9 border-1 border-[#FFFF00] rounded-lg duration-300 hover:shadow-[#FFFF00] hover:shadow-md max-md:text-[1rem] max-md:w-18 max-lg:h-8 max-lg:text-[1.1rem] max-lg:w-22 ">نظاره
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-5 h-5 max-md:h-3 max-md:w-3" style="fill: #FFFF00;"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z"/></svg>
+                        </a>
+                    </div>
+                    <div class="w-[40%] h-[100%] flex justify-center items-center">
+                        <img src="../image/bullock-additivi-ad-azione-migliorativa.png" alt="" class="h-[90%] w-auto max-lg:h-[80%]" loading="lazy">
+                    </div>
+                </section>
+
+        </div>
+    </main>
+
 
     <script src="../script/jquery3.7.1.js"></script>
     <script src="../script/jquery.toast.js"></script>
