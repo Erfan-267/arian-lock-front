@@ -70,8 +70,9 @@
     outline: none;
 }
 .selectedBtn{
-    background-color: #FFFF00;
-    color: #171818;
+    background-color: #FF0000;
+    color: white;
+    border: none;
 }
 
 

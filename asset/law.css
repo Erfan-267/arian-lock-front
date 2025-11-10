@@ -18,12 +18,12 @@
         background-color: #171818;
         padding: 30px 20px;
         border-radius: 20px;
-        border: 1px solid #FFFF00;
+        border: 1px solid #FF0000;
         /* box-shadow: 1px 1px  15px 1px #999999; */
     }
     .orginal{
         text-align: center;
-        color: #FFFF00;
+        color: #FFff00;
         
     }
 
@@ -32,7 +32,7 @@
         color: #FFFF00;
         margin-top: 25px;
         margin-bottom: 10px;
-        border-bottom: 1px solid #FFFF00;
+        border-bottom: 1px solid #FF0000;
         padding-bottom: 5px;
         direction: rtl;
     }
