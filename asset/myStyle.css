@@ -60,7 +60,7 @@
 
 }
 ::-webkit-scrollbar-thumb{
-    background-color: #bd0202;
+    background-color: #ff0000;
 }
 .link-selected{
     color: #FFFF00;
@@ -73,6 +73,7 @@
     background-color: #FFFF00;
     color: #171818;
 }
+
 
 .show-all-comments::-webkit-scrollbar{
     width: 0px;
