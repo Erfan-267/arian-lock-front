@@ -14,7 +14,7 @@
     background-color: #171818;
     border-radius: 25px;
     box-shadow: 1px 1px 27px 0.5px #292c00;
-    border: 1px solid #FF0000;
+    border: 1px solid #db1818;
 }
 #form-survery>section:first-child{
     width: 100%;
@@ -108,7 +108,7 @@
 #form-survery>section:nth-child(3)>label:last-child>textarea{
     width: 95%;
     height: 100%;
-    border: 2px solid #FF0000;
+    border: 2px solid #db1818;
     border-radius: 10px;
     padding: 10px;
     direction: rtl;
@@ -131,7 +131,7 @@
 #form-survery>section:last-child>button{
     width: 150px;
     height: 50px;
-    background-color: #FF0000;
+    background-color: #db1818;
     border: none;
     color: white;
     border-radius: 10px;

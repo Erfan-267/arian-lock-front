@@ -60,7 +60,7 @@
 
 }
 ::-webkit-scrollbar-thumb{
-    background-color: #ff0000;
+    background-color: #db1818;
 }
 .link-selected{
     color: #FFFF00;
@@ -70,7 +70,7 @@
     outline: none;
 }
 .selectedBtn{
-    background-color: #FF0000;
+    background-color: #db1818;
     color: white;
     border: none;
 }

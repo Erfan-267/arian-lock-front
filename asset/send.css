@@ -17,7 +17,7 @@ body {
       background: #171818;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      border: 1px #FF0000 solid;
+      border: 1px #db1818 solid;
     }
 
     
@@ -34,7 +34,7 @@ body {
     }
 
     .step {
-      background: #FF0000;
+      background: #db1818;
       padding: 20px;
       border-radius: 12px;
       margin-bottom: 15px;
