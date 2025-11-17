@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>سبد خرید مدرن</title>
+
+  <!-- مدرن، نئومورفیک + گلاس مورفیسم → تم مشکی + قرمز + زرد → با سایه‌های ملایم و انیمیشن‌ها -->
+
+  <style>
+    body {
+      background: black;
+    }
+    .glass {
+      background: #171818;
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen text-white p-6">
+
+  <div class="max-w-6xl mx-auto p-6 glass rounded-3xl shadow-[0_0_30px_#bd181840] ">
+
+    <h1 class="text-4xl max-md:text-3xl font-extrabold mb-10 text-center justify-center flex items-center tracking-wide text-[#ffff00] ">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="fill-[#ffff00] hover:fill-[#db1818] w-12 h-12  max-lg:w-10 max-lg:h-10"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M24 48C10.7 48 0 58.7 0 72C0 85.3 10.7 96 24 96L69.3 96C73.2 96 76.5 98.8 77.2 102.6L129.3 388.9C135.5 423.1 165.3 448 200.1 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L200.1 400C188.5 400 178.6 391.7 176.5 380.3L171.4 352L475 352C505.8 352 532.2 330.1 537.9 299.8L568.9 133.9C572.6 114.2 557.5 96 537.4 96L124.7 96L124.3 94C119.5 67.4 96.3 48 69.2 48L24 48zM208 576C234.5 576 256 554.5 256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z"/></svg>
+        سبد خرید مدرن
+    </h1>
+
+    <form id="cartForm" class="grid grid-cols-1 xl:grid-cols-3 gap-10">
+
+      <!-- لیست محصولات مدرن → کارت شناور با افکت هاور -->
+      <div class="xl:col-span-2 space-y-6" id="cartItems">
+
+        <!-- foreach -->
+        <div class="cart-item p-6 rounded-3xl glass  border border-[#bd181820] shadow-xl hover:shadow-red-800/40 transition duration-300 hover:-translate-y-1 bg-black" data-id="1">
+
+          <div class="flex flex-col md:flex-row items-center md:items-start gap-8 ">
+
+            <!-- تصویر با استایل مدرن -->
+            <div class="relative">
+              <img src="../image/bullock-antifurto-defender.png" class="w-32 h-32 rounded-2xl  shadow-lg" />
+              <span class="absolute -top-2 -right-2 bg-[#bd1818] px-3 py-1 rounded-xl text-sm shadow-md">ویژه</span>
+            </div>
+
+            <div class="flex-1 w-full">
+              <p class="font-bold text-2xl max-sm:text-xl tracking-wide">نام محصول حرفه‌ای</p>
+
+              <div class="flex gap-4 mt-2 text-sm items-center max-sm:flex-col">
+                <span class="line-through text-gray-500 text-base">150,000</span>
+                <span class="text-green-400 text-lg font-semibold">120,000 تومان</span>
+                <span class="text-xs bg-[#ffff00] text-black px-2 py-1 rounded-lg font-bold">20% OFF</span>
+              </div>
+
+              <div class="flex items-center justify-between mt-6 max-sm:flex-col-reverse max-sm:gap-2">
+
+                <!-- کنترل تعداد → طراحی مدرن نئومورفیک -->
+                <div class="flex items-center gap-3 bg-black/40 px-4 py-2 rounded-2xl shadow-inner border border-gray-800">
+                  <button type="button" class="w-9 h-9 rounded-xl bg-gray-800 hover:bg-gray-700 text-xl font-bold transition" onclick="changeQty(1, 'plus')">+</button>
+                  <span id="qty1" class="text-xl font-bold">1</span>
+                  <button type="button" class="w-9 h-9 rounded-xl bg-gray-800 hover:bg-gray-700 text-xl font-bold transition" onclick="changeQty(1, 'minus')">-</button>
+                </div>
+
+                <p class="font-bold text-[#ffff00] text-2xl drop-shadow-[0_0_6px_#ffff00]" id="price1">120,000</p>
+              </div>
+
+              <button type="button" class="text-red-500 mt-5 hover:text-red-400 transition text-sm" onclick="removeItem(1)">حذف محصول</button>
+            </div>
+          </div>
+
+          <!-- ورودی‌های مخفی -->
+          <input type="hidden" name="items[1][qty]" id="inputQty1" value="1">
+          <input type="hidden" name="items[1][final_price]" value="120000">
+          <input type="hidden" name="items[1][original_price]" value="150000">
+        </div>
+
+        
+
+      </div>
+
+      <!-- خلاصه سفارش مدرن → طراحی Glass + نئومورفیک → استایل VIP -->
+      <div class="bg-black rounded-3xl border border-[#bd181820] p-8 shadow-xl h-fit sticky top-10">
+
+        <h2 class="text-2xl max-sm:text-[1.4rem] font-bold mb-6 text-center tracking-wide">خلاصه پرداخت</h2>
+
+        <div class="space-y-5 text-lg max-sm:text-[0.8rem]">
+          <div class="flex justify-between border-b border-gray-700 pb-2">
+            <span>جمع مبلغ فروش:</span>
+            <span id="sumPrice">120,000</span>
+          </div>
+
+          <div class="flex justify-between border-b border-gray-700 pb-2">
+            <span>سود شما از خرید:</span>
+            <span id="profit" class="text-green-400 font-bold">30,000</span>
+          </div>
+
+          <div class="flex justify-between mt-4 text-xl max-sm:text-[1rem] font-bold text-[#ffff00] ">
+            <span>مبلغ نهایی:</span>
+            <span id="totalPrice">120,000</span>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full mt-8 px-6 py-4 bg-gradient-to-r from-[#bd1818] to-red-900 rounded-2xl text-xl font-bold shadow-xl hover:bg-gradient-to-r hover:from-[#ffff00] hover:to-yellow-500 hover:text-black duration-300 transition">
+          ثبت و ادامه
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+<script>
+  let cart = {
+    1: { qty: 1, final_price: 120000, original_price: 150000 }
+  };
+
+  function changeQty(id, type) {
+    if (type === 'plus') cart[id].qty++;
+    else if (type === 'minus' && cart[id].qty > 1) cart[id].qty--;
+
+    updateUI(id);
+    updateTotal();
+  }
+
+  function removeItem(id) {
+    delete cart[id];
+    document.querySelector(`[data-id="${id}"]`).remove();
+    updateTotal();
+  }
+
+  function updateUI(id) {
+    document.getElementById(`qty${id}`).textContent = cart[id].qty;
+    document.getElementById(`price${id}`).textContent = (cart[id].qty * cart[id].final_price).toLocaleString();
+    document.getElementById(`inputQty${id}`).value = cart[id].qty;
+  }
+
+  function updateTotal() {
+    let total = 0;
+    let profit = 0;
+
+    Object.values(cart).forEach(item => {
+      total += item.qty * item.final_price;
+      profit += item.qty * (item.original_price - item.final_price);
+    });
+
+    document.getElementById('sumPrice').textContent = total.toLocaleString();
+    document.getElementById('profit').textContent = profit.toLocaleString();
+    document.getElementById('totalPrice').textContent = total.toLocaleString();
+  }
+
+  document.getElementById('cartForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let formData = new FormData(this);
+
+    fetch('/save-cart', {
+      method: 'POST',
+      body: formData
+    })
+    .then(res => res.text())
+    .then(data => alert('سبد خرید با موفقیت ثبت شد'));
+  });
+</script>
+
+</body>
+</html>

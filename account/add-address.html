@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../asset/myStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="shortcut icon" href="../image/arian lock logo.png" type="image/x-icon">
+  <title>ArianLock | افزودن آدرس</title>
+  <style>
+    body { background: black; }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6 bg-black">
+  <div class="w-full max-w-2xl bg-[#171818] text-white rounded-2xl p-6 shadow-2xl border" style="border-color:#bd1818;">
+
+    <h1 class="text-xl font-bold mb-6 text-center text-[#FFFF00]">فرم افزودن آدرس</h1>
+
+    <form id="addressForm" class="space-y-4">
+
+      <!-- شهر -->
+      <div>
+        <label class="text-md text-[#FFFF00]">شهر</label>
+        <input type="text" id="city" class="mt-2 w-full p-2 rounded bg-black border border-[#db1818] focus:border-[#FFFF00] dir-text OutLine focus:ring-0" />
+      </div>
+
+      <!-- استان -->
+      <div>
+        <label class="text-md text-[#FFFF00]">استان</label>
+        <input type="text" id="state" class="mt-2 w-full p-2 rounded bg-black border border-[#db1818] focus:border-[#FFFF00] dir-text OutLine focus:ring-0" />
+      </div>
+
+      <!-- منطقه -->
+      <div>
+        <label class="text-md text-[#FFFF00]">منطقه</label>
+        <input type="text" id="district" class="mt-2 w-full p-2 rounded bg-black border border-[#db1818] focus:border-[#FFFF00] dir-text OutLine focus:ring-0" />
+      </div>
+
+      <!-- نشانی -->
+      <div>
+        <label class="text-md text-[#FFFF00]">نشانی کامل</label>
+        <textarea id="address" rows="4" class="mt-2 w-full p-2 rounded bg-black border border-[#db1818] focus:border-[#FFFF00] dir-text OutLine focus:ring-0"></textarea>
+      </div>
+
+      <!-- پلاک و طبقه -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="text-md text-[#FFFF00]">پلاک</label>
+          <input type="text" id="plate" class="mt-2 w-full p-2 rounded bg-black border border-[#db1818] focus:border-[#FFFF00] dir-text OutLine focus:ring-0" />
+        </div>
+
+        <div>
+          <label class="text-md text-[#FFFF00]">طبقه</label>
+          <input type="text" id="floor" class="mt-2 w-full p-2 rounded bg-black border border-[#db1818] focus:border-[#FFFF00] dir-text OutLine focus:ring-0" />
+        </div>
+      </div>
+
+      <!-- کد پستی -->
+      <div>
+        <label class="text-md text-[#FFFF00]">کدپستی</label>
+        <input type="text" id="postal" class="mt-2 w-full p-2 rounded bg-black border border-[#db1818] focus:border-[#FFFF00] dir-text OutLine focus:ring-0" />
+      </div>
+
+      <!-- شماره ثابت (اختیاری) -->
+      <div>
+        <label class="text-md text-[#FFFF00]">شماره تلفن ثابت (اختیاری)</label>
+        <input type="number" id="phone" class="mt-2 w-full p-2 rounded bg-black border border-[#db1818] focus:border-[#FFFF00] dir-text OutLine focus:ring-0" />
+      </div>
+
+      <!-- دکمه‌ها -->
+      <div class="flex justify-between items-center pt-4">
+        <button type="reset" class="px-4 py-2 rounded border-2 text-[#FFFF00] font-bold border-[#FFFF00] hover:bg-gray-800 transition cursor-pointer">پاک کردن</button>
+
+        <button type="submit" class="px-4 py-2 rounded bg-[#bd1818] border-2 font-bold text-white hover:bg-black hover:border-[#FFFF00] hover:text-[#FFFF00] transition cursor-pointer">ثبت آدرس</button>
+      </div>
+
+    </form>
+
+    
+  </div>
+    <script src="../script/jquery3.7.1.js"></script>
+    <script src="../script/main.js"></script>
+  
+</body>
+</html>
