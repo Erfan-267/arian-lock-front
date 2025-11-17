@@ -30,6 +30,7 @@
     box-sizing: border-box;
     font-family: 'ghaf' ;
     /* unicode-bidi: embed; */
+    
 }
 .change-font-logo{
     font-family: 'Bangers' !important;
