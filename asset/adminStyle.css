@@ -1,0 +1,17 @@
+
+@font-face{
+    font-family: "ghaf";
+    src: "../myFonts/ghaf.ttf";
+    /* src: "../font/ghaf.otf" format('otf'); */
+
+}
+*{
+    /* padding: 0;
+    margin: 0; */
+    box-sizing: border-box;
+    font-family: 'ghaf' ;
+    /* unicode-bidi: embed; */
+    
+}
+
+
