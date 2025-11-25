@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سفارش من | #A5248F</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../asset/myStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="shortcut icon" href="../image/arian lock logo.png" type="image/x-icon">
+</head>
+
+<body class="bg-black">
+
+    <main class="max-w-4xl mx-auto py-8 px-4 md:px-0">
+
+        <!-- عنوان صفحه -->
+        <h1 class="text-3xl font-bold text-red-600 mb-8 text-center drop-shadow-md">
+            جزئیات سفارش
+        </h1>
+
+        <!-- باکس اصلی -->
+        <section class="bg-black border border-red-700 rounded-2xl shadow-red-900 shadow-lg p-5 sm:p-6 md:p-8 transition-all duration-300">
+
+            <!-- شماره سفارش + تاریخ -->
+            <div class="flex flex-col sm:flex-row justify-between gap-2 items-start sm:items-center mb-6">
+                <span class="text-lg md:text-xl font-semibold text-white">
+                    شماره سفارش: <span class="text-yellow-300">#A5248F</span>
+                </span>
+                <span class="text-gray-400 text-sm md:text-base">1403/11/15</span>
+            </div>
+
+            <!-- وضعیت سفارش -->
+            <div class="w-full bg-[#ffff00] border border-red-700 rounded-xl p-4 mb-6 flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                <span class="text-black font-semibold text-base md:text-lg">وضعیت سفارش:</span>
+                <span class="text-blue-500 text-xl font-bold">در حال پردازش</span>
+            </div>
+
+            <!-- لیست محصولات -->
+            <div class="mb-6">
+                <h3 class="text-lg font-bold text-red-500 mb-4">محصولات سفارش</h3>
+
+                <div class="space-y-4">
+
+                    <!-- محصول -->
+                    <div class="flex flex-col sm:flex-row items-center bg-black border border-red-700 rounded-xl p-4 shadow-md gap-4">
+                        <img src="../image/bullock-additivi.png" class="w-24 h-24 object-cover" />
+                        <div class="flex-1 w-full sm:w-auto">
+                            <p class="text-white font-semibold text-lg">محصول تستی</p>
+                            <p class="text-gray-400 text-sm mt-1">کد محصول: 5a4a5f</p>
+                        </div>
+                        <div class="text-right w-full sm:w-auto">
+                            <p class="text-white font-bold">۲ عدد</p>
+                            <p class="text-yellow-300 font-semibold">1,000,000 تومان</p>
+                        </div>
+                    </div>
+
+                    <!-- محصول دوم -->
+                    <div class="flex flex-col sm:flex-row items-center bg-black border border-red-700 rounded-xl p-4 shadow-md gap-4">
+                        <img src="../image/bullock-additivi.png" class="w-24 h-24 object-cover" />
+                        <div class="flex-1 w-full sm:w-auto">
+                            <p class="text-white font-semibold text-lg">افزودنی موتور</p>
+                            <p class="text-gray-400 text-sm mt-1">کد محصول: ZX4521</p>
+                        </div>
+                        <div class="text-right w-full sm:w-auto">
+                            <p class="text-white font-bold">۱ عدد</p>
+                            <p class="text-yellow-300 font-semibold">500,000 تومان</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- مجموع قیمت -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 py-4 border-t border-red-700">
+                <span class="text-white text-lg">مجموع مبلغ:</span>
+                <span class="text-2xl font-bold text-yellow-300">1,500,000 تومان</span>
+            </div>
+
+            <!-- اطلاعات گیرنده -->
+            <div class="mt-8">
+                <h3 class="text-lg font-bold text-red-500 mb-4">اطلاعات گیرنده</h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-white">
+                    <span>نام گیرنده: <b class="text-yellow-300">عرفان فریدونی</b></span>
+                    <span>موبایل: <b class="text-yellow-300">09016688715</b></span>
+                    <span>کد پستی: <b class="text-yellow-300">1234567890</b></span>
+                    <span>شهر: <b class="text-yellow-300">تهران</b></span>
+                    <span>منطقه: <b class="text-yellow-300">7</b></span>
+                    <span>پلاک: <b class="text-yellow-300">5</b></span>
+                </div>
+
+                <!-- آدرس -->
+                <div class="mt-4 bg-black border border-red-700 p-4 rounded-xl text-gray-300 leading-7">
+                    آدرس کامل:<br>
+                    تهران، منطقه ۷، خیابان آزادی، کوچه شهید …، پلاک ۵، طبقه سوم
+                </div>
+            </div>
+
+        </section>
+
+        <!-- دکمه بازگشت -->
+        <div class="mt-8 text-center">
+            <a href="#" class="px-6 py-3 bg-red-700 text-white rounded-xl text-lg hover:bg-red-800 transition-all duration-200 active:scale-95 shadow-lg">
+                بازگشت
+            </a>
+        </div>
+
+    </main>
+
+    <script src="../script/jquery3.7.1.js"></script>
+    <script src="../script/jquery.toast.js"></script>
+    <link rel="stylesheet" href="../asset/jquery.toast.css">
+    <script src="../script/main.js"></script>
+</body>
+</html>
