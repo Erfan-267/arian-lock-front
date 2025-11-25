@@ -30,12 +30,7 @@
     /* unicode-bidi: embed; */
     
 }
-.change-font-logo{
-    font-family: 'Bangers' !important;
-}
-.change-font{
-    font-family: 'ghaf' !important;
-}
+
 .dir-text{
     unicode-bidi: embed;
     direction: rtl;
